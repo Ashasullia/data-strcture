@@ -18,9 +18,9 @@ using namespace std;<br>
 
 int main()<br>
 {<br>
-	int size, i, arr1[10], arr2[10], add[10];<br>
+int size, i, arr1[10], arr2[10], add[10];<br>
 	
-	cout << "\nPlease Enter the Array Size =  ";<br>
+cout << "\nPlease Enter the Array Size =  ";<br>	  
 	cin >> size;<br>
 	
 	cout << "\nPlease Enter the First Array Items= ";<br>
