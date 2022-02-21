@@ -135,44 +135,44 @@ struct node	<br>
 int count = 0;<br>
 class singly<br>
 {<br>
-	public:<br>
-		node* create_node(int);<br>
-		void insert_begin();<br>
-		void insert_end();<br>
-		void insert_pos();<br>
-		void search();<br>
-		singly()<br>
-		{<br>
-			first = NULL;<br>
-			last = NULL;<br>
-		}<br>
+public:<br>
+node* create_node(int);<br>
+void insert_begin();<br>
+void insert_end();<br>
+void insert_pos();<br>
+void search();<br>
+singly()<br>
+{<br>
+first = NULL;<br>
+last = NULL;<br>
+}<br>
 };<br>
 int main()<br><br>
 {<br>
 
-	int choice;<br>
-	singly sl,s2;<br>
-	do<br>
-	{
-		cout<<"\t\t\t--------------------------------"<<endl;<br>
-		cout<<"\t\t\tOperations on singly linked list"<<endl;<br>
-		cout<<"\t\t\t--------------------------------"<<endl;<br>
-		cout<<"1.Insert at first\t";<br>
-		cout<<"2.Insert at Last\t";<br>
-		cout<<"3.Insert at Position"<<endl;<br>
-		cout<<"4.Search\t\t";<br>
-		cout<<"5.Display\t\t";<br>
-		cout<<"6.Exit\t\t\t"<<endl;<br>
-		cout<<"Enter your choice : ";<br>
-		cin>>choice;<br>
-		switch(choice)<br>
-		{
-			case 1:	sl.insert_begin();<br>
-				s2.display();
-				break;
-			case 2:	sl.insert_end();
-				s2.display();
-				break;
+int choice;<br>
+singly sl,s2;<br>
+do<br>
+{
+cout<<"\t\t\t--------------------------------"<<endl;<br>
+cout<<"\t\t\tOperations on singly linked list"<<endl;<br>
+cout<<"\t\t\t--------------------------------"<<endl;<br>
+cout<<"1.Insert at first\t";<br>
+cout<<"2.Insert at Last\t";<br>
+cout<<"3.Insert at Position"<<endl;<br>
+cout<<"4.Search\t\t";<br>
+cout<<"5.Display\t\t";<br>
+cout<<"6.Exit\t\t\t"<<endl;<br>
+cout<<"Enter your choice : ";<br>
+cin>>choice;<br>
+switch(choice)<br>
+{
+case 1:	sl.insert_begin();<br>
+s2.display();
+break;
+case 2:	sl.insert_end();
+s2.display();
+break;
 			case 3:	sl.insert_pos();
 				s2.display();
 				break;
