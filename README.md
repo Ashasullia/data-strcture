@@ -140,34 +140,34 @@ class singly<br>
 		void insert_begin();<br>
 		void insert_end();<br>
 		void insert_pos();<br>
-		void search();
-		singly()
-		{
-			first = NULL;
-			last = NULL;
-		}
-};
-int main()
-{
+		void search();<br>
+		singly()<br>
+		{<br>
+			first = NULL;<br>
+			last = NULL;<br>
+		}<br>
+};<br>
+int main()<br><br>
+{<br>
 
-	int choice;
-	singly sl,s2;
-	do
+	int choice;<br>
+	singly sl,s2;<br>
+	do<br>
 	{
-		cout<<"\t\t\t--------------------------------"<<endl;
-		cout<<"\t\t\tOperations on singly linked list"<<endl;
-		cout<<"\t\t\t--------------------------------"<<endl;
-		cout<<"1.Insert at first\t";
-		cout<<"2.Insert at Last\t";
-		cout<<"3.Insert at Position"<<endl;
-		cout<<"4.Search\t\t";
-		cout<<"5.Display\t\t";
-		cout<<"6.Exit\t\t\t"<<endl;
-		cout<<"Enter your choice : ";
-		cin>>choice;
-		switch(choice)
+		cout<<"\t\t\t--------------------------------"<<endl;<br>
+		cout<<"\t\t\tOperations on singly linked list"<<endl;<br>
+		cout<<"\t\t\t--------------------------------"<<endl;<br>
+		cout<<"1.Insert at first\t";<br>
+		cout<<"2.Insert at Last\t";<br>
+		cout<<"3.Insert at Position"<<endl;<br>
+		cout<<"4.Search\t\t";<br>
+		cout<<"5.Display\t\t";<br>
+		cout<<"6.Exit\t\t\t"<<endl;<br>
+		cout<<"Enter your choice : ";<br>
+		cin>>choice;<br>
+		switch(choice)<br>
 		{
-			case 1:	sl.insert_begin();
+			case 1:	sl.insert_begin();<br>
 				s2.display();
 				break;
 			case 2:	sl.insert_end();
