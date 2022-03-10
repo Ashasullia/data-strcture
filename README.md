@@ -168,134 +168,131 @@ cin>>choice;<br>
 switch(choice)<br>
 {
 case 1:	sl.insert_begin();<br>
-s2.display();
-break;
-case 2:	sl.insert_end();
-s2.display();
-break;
-			case 3:	sl.insert_pos();
-				s2.display();
-				break;
-			case 4:sl.search();
-				s2.display();
-				break;
-			case 5:s2.display();
-				break;
-			case 6:cout<<"Successfully Exited"<<endl;
-				s2.display();
-				exit(0);
-				break;
-			default:cout<<"Wrong Choice...???"<<endl;
-				s2.display();
-				break;
-		}
-	}
-	while(choice != 20);
-	getch();
-}
-node* singly :: create_node(int num)
-{
-	struct node *nn;
-	nn = new(struct node);
-	if (nn == NULL)
-	{
-		cout<<"Memory not allocated"<<endl;
-		return 0;
-	}
-	else
-	{
-		nn->info = num;
-		nn->next = NULL;
-		return nn;
-	}
-}
-void singly :: insert_begin()
-{
-	int value;
-	struct node *temp;
-	cout<<"Enter the element to be inserted : ";
-	cin>>value;
-	temp = create_node(value);
-	if ( first == last && first == NULL )
-	{
-		count++;
-		first = last = temp;
-		first->next = last->next = temp->next;
-		cout<<first->info<<" inserted at first in the empty list"<<endl;
-	}
-	else
-	{
-		count++;
-		temp->next = first;
-		first = temp;
-		cout<<first->info<<" inserted at first"<<endl;
-	}
-}
-void singly :: insert_end()
-{
-	int value;
-	struct node *temp;
-	cout<<"Enter the element to be inserted : ";
-	cin>>value;
-	temp = create_node(value);
-	if ( first == last && first == NULL )
-	{
-		count++;
-		first = last = temp;
-		first->next = last->next = temp->next;
-		cout<<last->info<<" inserted at first in the empty list"<<endl;
-	}
-	else
-	{
-		count++;
-		last->next = temp;
-		last = temp;
-		cout<<last->info<<" inserted at last"<<endl;
-	}
-}
-void singly :: insert_pos()
-{
-	int value, pos;
-	struct node *temp, *f, *l;
-	cout<<"Enter the element to be inserted : ";
-	cin>>value;
-	temp = create_node(value);
-	if ( first == NULL && last == NULL )
-	{
-		cout<<"The list is empty, Pls enter the position [ SAY 1 ] : ";
-		cin>>pos;
-		if ( pos == 1 )
-		{
-			count++;
-			first = last = temp;
-			first->next = last->next = temp->next;
-			cout<<temp->info<<" inserted at first in the empty list"<<endl;
-		}
-		else
-			cout<<"Invalid Position"<<endl;
-	}
-	else
-	{
-		cout<<"Enter the position from 1 to "<<count + 1<<" : ";
-		cin>>pos;
-		if ( pos == 1 )
-		{
-			count++;
-			temp->next = first;
-			first = temp;
-			cout<<first->info<<" inserted at first"<<endl;
-		}
-		else if ( pos == count + 1 )
-		{
-			count++;
-			last->next = temp;
-			last = temp;
-			cout<<last->info<<" inserted at last"<<endl;
-		}
-		else if (pos > 1  && pos <= count)
-		{
-			f = first;
-			for ( int i = 1 ; i <= pos - 1 ; i++ )
+s2.display();<br>
+break;<br>
+case 2:	sl.insert_end();<br>
+s2.display();<br>
+break;<br>
+			case 3:	sl.insert_pos();<br>
+				s2.display();<br>
+				break;<br>
+			case 4:sl.search();<br>
+				s2.display();<br>
+				break;<br>
+			case 5:s2.display();<br>
+				break;<br>
+			case 6:cout<<"Successfully Exited"<<endl;<br>
+				s2.display();<br>
+				exit(0);<br>
+				break;<br>
+			default:cout<<"Wrong Choice...???"<<endl;<br>
+				s2.display();<br>
+				break;<br>
+		}<br>
+	}<br>
+	while(choice != 20);<br>
+	getch();<br>
+}<br>
+node* singly :: create_node(int num)<br>
+{<br>
+	struct node *nn;<br>
+	nn = new(struct node);<br>
+	if (nn == NULL)<br>
+	{<br>
+		cout<<"Memory not allocated"<<endl;<br>
+		return 0;<br>
+	}<br>
+	else<br>
+	{<br>
+		nn->info = num;<br>
+		nn->next = NULL;<br>
+		return nn;<br>
+	}<br>
+}<br>
+void singly :: insert_begin()<br>
+{<br>
+	int value;<br>
+	struct node *temp;<br>
+	cout<<"Enter the element to be inserted : ";<br>
+	cin>>value;<br>
+	temp = create_node(value);<br>
+	if ( first == last && first == NULL )<br>
+	{<br>
+		count++;v<br>
+		first = last = temp;<br>
+		first->next = last->next = temp->next;<br>
+		cout<<first->info<<" inserted at first in the empty list"<<endl;<br>
+	}<br>
+	else<br>
+	{<br>
+		count++;<br>
+		temp->next = first;<br>
+		first = temp;<br>
+		cout<<first->info<<" inserted at first"<<endl;<br>
+	}<br>
+}<br>
+void singly :: insert_end()<br>
+{<br>
+	int value;<br>
+	struct node *temp;<br><br>
+	cout<<"Enter the element to be inserted : ";<br>
+	cin>>value;<br>
+	temp = create_node(value);<br>
+	{<br>
+		count++;<br>
+		first = last = temp;<br>
+		first->next = last->next = temp->next;<br>
+		cout<<last->info<<" inserted at first in the empty list"<<endl;<br>
+	}<br>
+	else<br>
+	{<br>
+		count++;<br>
+		last->next = temp;<br>
+		last = temp;<br>
+		cout<<last->info<<" inserted at last"<<endl;<br>
+	}<br>
+}<br>
+void singly :: insert_pos()<br>
+{<br>
+	int value, pos;<br>
+	struct node *temp, *f, *l;<br>
+	cout<<"Enter the element to be inserted : ";<br>
+	cin>>value;<br>
+	temp = create_node(value);<br>
+	if ( first == NULL && last == NULL )<br>
+	{<br>
+		cout<<"The list is empty, Pls enter the position [ SAY 1 ] : ";<br>
+		cin>>pos;<br>
+		if ( pos == 1 )<br><br>
+		{<br>
+			count++;<br>
+			first = last = temp;<br>
+			first->next = last->next = temp->next;<br>
+			cout<<temp->info<<" inserted at first in the empty list"<<endl;<br>
+		}<br>
+		else<br>
+			cout<<"Invalid Position"<<endl;<br>
+	}<br>
+	else<br>
+	{<br><br>
+		cout<<"Enter the position from 1 to "<<count + 1<<" : ";<br>
+		cin>>pos;<br>
+		if ( pos == 1 )<br>
+		{<br>
+			count++;<br>
+			temp->next = first;<br>
+			first = temp;<br>
+			cout<<first->info<<" inserted at first"<<endl;<br>
+		}<br>
+		else if ( pos == count + 1 )<br>
+		{<br>
+			count++;<br><br>
+			last = temp;<br>
+			cout<<last->info<<" inserted at last"<<endl;<br>
+		}<br>
+		else if (pos > 1  && pos <= count)<br><br>
+		{<br>
+			f = first;<br><br>
 			{
 				l = f;
 				f = f->next;
