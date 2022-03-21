@@ -346,11 +346,11 @@ void singly :: search()<br>
 			f = f->next;<br>
 		}<br>
 		if (flag == 0)<br>
-			cout<<"Element "<<value<<" not found in the list"<<endl;<br>![Screenshot (33)](https://user-images.githubusercontent.com/99865138/159218082-be67e341-8ee4-4108-ac15-9d371ba9dda1.png)
-		else if (flag == 1)<br>![Screenshot (33)](https://user-images.githubusercontent.com/99865138/159218101-5a7dde34-a5cf-4551-996e-4fc6f0b9fc3d.png)
-			cout<<endl<<"Element "<<value<<" entered "<<flag<<" time"<<endl;<br>![Uploading Screenshot (33).png…]()
-		else<br>![Uploading Screenshot (33).png…]()
-			cout<<endl<<"Element "<<value<<" entered "<<flag<<" times"<<endl;<br>![Uploading Screenshot (33).png…]()
+			cout<<"Element "<<value<<" not found in the list"<<endl;<br>
+		else if (flag == 1)<br>
+			cout<<endl<<"Element "<<value<<" entered "<<flag<<" time"<<endl;<br>
+		else<br>
+			cout<<endl<<"Element "<<value<<" entered "<<flag<<" times"<<endl;<br>
 	}<br>
 }<br>
 
@@ -403,4 +403,6 @@ cout<<"Not a BST"<<endl;<br>
 return 0;<br>
 				
  }<br>
-![Uploading Screenshot (33).png…]()
+Out put:<br>
+![Screenshot (33)](https://user-images.githubusercontent.com/99865138/159218412-a03c97df-38c7-43ba-b8d3-0da2d1039c24.png)<br>
+****************************************************************************************<br>	
