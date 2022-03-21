@@ -293,66 +293,114 @@ void singly :: insert_pos()<br>
 		else if (pos > 1  && pos <= count)<br><br>
 		{<br>
 			f = first;<br><br>
-			{
-				l = f;
+			{<br>
+				l = f;<br>
 				f = f->next;
-			}
-			count++;
-			l->next = temp;
-			temp->next = f;
-			cout<<temp->info<<" inserted at position "<<pos<<endl;
-		}
-		else
-			cout<<"Position out of range"<<endl;
-	}
-}
-void singly :: display()
-{
-	struct node *temp;
-	if ( first == NULL && last == NULL )
-	{cout<<"The list is empty...!!!"<<endl;}
-	else
-	{
-		temp = first;
-		cout<<"Linked list of "<<count<<" elements : ";
-		for ( int i = 1 ; i < count ; i++ )
-		{
-			cout<<temp->info<<"->";
-			temp = temp->next;
-		}
+			}<br>
+			count++;<br>
+			l->next = temp;<br>
+			temp->next = f;<br>
+			cout<<temp->info<<" inserted at position "<<pos<<endl;<br>
+		}<br>
+		else<br>
+			cout<<"Position out of range"<<endl<br>;
+	}<br>
+}<br>
+void singly :: display()<br>
+	struct node *temp;<br>
+	if ( first == NULL && last == NULL )<br>
+	{cout<<"The list is empty...!!!"<<endl<br>;}<br>
+	else<br>
+	{<br>
+		temp = first;<br>
+		cout<<"Linked list of "<<count<<" elements : ";<br>
+		for ( int i = 1 ; i < count ; i++ )<br>
+		{<br>
+			cout<<temp->info<<"->";<br>
+			temp = temp->next;<br>
+		}<br>
 		cout<<temp->info<<endl;
-	}
-}
-void singly :: search()
-{
-	int pos = 0, flag = 0, value;
-	struct node *f;
-	if ( first == NULL && last == NULL ) {}
-	else
-	{
-		cout<<"Enter the value to be searched : ";
-		cin>>value;
-		f = first;
-		for (int i = 0; i < count; i++)
-		{
+	}<br>
+}<br>
+void singly :: search()<br>
+{<br>
+	int pos = 0, flag = 0, value;<br>
+	struct node *f;<br>
+	if ( first == NULL && last == NULL ) {}<br>
+	else<br>
+	{<br>
+		cout<<"Enter the value to be searched : ";<br>
+		cin>>value;<br>
+		f = first;<br>
+		for (int i = 0; i < count; i++)<br>
+		{<br>
 			pos++;
-			if (f->info == value)
-			{
+			if (f->info == value)<br>
+			{<br>
 				flag++;
-				if (flag == 1)
-					cout<<"Element "<<value<<" found at position : "<<pos;
-				else if (flag > 1 && flag <= count)
-					cout<<" , "<<pos;
-			}
-			f = f->next;
-		}
-		if (flag == 0)
-			cout<<"Element "<<value<<" not found in the list"<<endl;
-		else if (flag == 1)
-			cout<<endl<<"Element "<<value<<" entered "<<flag<<" time"<<endl;
-		else
-			cout<<endl<<"Element "<<value<<" entered "<<flag<<" times"<<endl;
-	}
-}
+				if (flag == 1)<br>
+					cout<<"Element "<<value<<" found at position : "<<pos;<br>
+				else if (flag > 1 && flag <= count)<br>
+					cout<<" , "<<pos;<br>
+			}<br>
+			f = f->next;<br>
+		}<br>
+		if (flag == 0)<br>
+			cout<<"Element "<<value<<" not found in the list"<<endl;<br>![Screenshot (33)](https://user-images.githubusercontent.com/99865138/159218082-be67e341-8ee4-4108-ac15-9d371ba9dda1.png)
+		else if (flag == 1)<br>![Screenshot (33)](https://user-images.githubusercontent.com/99865138/159218101-5a7dde34-a5cf-4551-996e-4fc6f0b9fc3d.png)
+			cout<<endl<<"Element "<<value<<" entered "<<flag<<" time"<<endl;<br>![Uploading Screenshot (33).png…]()
+		else<br>![Uploading Screenshot (33).png…]()
+			cout<<endl<<"Element "<<value<<" entered "<<flag<<" times"<<endl;<br>![Uploading Screenshot (33).png…]()
+	}<br>
+}<br>
 
-
+************************************************************************************<br>
+To check the binary tree is a BST <br>
+******************************************************************************<br>
+#include<bits/stdc++.h><br>
+using namespace std;<br>
+struct Node<br>
+{<br>
+int data;<br>
+struct Node*left,*right;<br>
+Node(int data)<br>
+{<br>
+this->data=data;<br>
+left=right=NULL;<br>
+	}<br>
+};<br>
+bool isBSTUtil(struct Node*root,Node *&prev)<br>
+{<br>
+if(root)<br>
+{<br>
+if(!isBSTUtil( root->left,prev))<br>
+return false;<br>
+if(prev!=NULL && root->data<=prev->data)<br>
+return false;<br>
+prev=root;
+return isBSTUtil(root->right,prev);<br>
+}<br>
+return true<br>;
+}<br>
+bool isBST(Node *root)<br>
+{<br>
+Node *prev=NULL;<br>
+return isBSTUtil(root,prev);<br>
+}<br>
+int main()<br>
+{<br>
+struct Node*root=new Node(7);<br>
+root->left=new Node(5);<br>
+root->right=new Node(2);<br>
+root->left->left=new Node(3);<br>
+root->left->right=new Node(6);<br>
+if(isBST(root))<br>
+{<br>
+cout<<"Is BST"<<endl;<br>
+}<br>
+else<br><br>
+cout<<"Not a BST"<<endl;<br>
+return 0;<br>
+				
+ }<br>
+![Uploading Screenshot (33).png…]()
